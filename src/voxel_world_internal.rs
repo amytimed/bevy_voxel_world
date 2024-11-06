@@ -19,12 +19,14 @@ use crate::{
     chunk::*,
     chunk_map::*,
     configuration::{ChunkDespawnStrategy, ChunkSpawnStrategy, VoxelWorldConfig},
-    mesh_cache::*,
     plugin::VoxelWorldMaterialHandle,
     voxel::WorldVoxel,
     voxel_material::LoadingTexture,
     voxel_world::{ChunkWillDespawn, ChunkWillRemesh, ChunkWillSpawn, VoxelWorldCamera},
 };
+
+#[cfg(feature = "display")]
+use crate::mesh_cache::*;
 
 #[derive(SystemParam, Deref)]
 pub struct CameraInfo<'w, 's, C: VoxelWorldConfig>(

@@ -1,6 +1,7 @@
 use bevy::prelude::*;
 
 use crate::chunk_map::ChunkMapUpdateBuffer;
+#[cfg(feature = "display")]
 use crate::mesh_cache::MeshCacheInsertBuffer;
 use crate::prelude::*;
 use crate::voxel_traversal::voxel_line_traversal;
