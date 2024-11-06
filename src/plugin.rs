@@ -1,11 +1,11 @@
-use bevy::{
-    asset::load_internal_asset,
-    pbr::ExtendedMaterial,
-    prelude::*,
-    render::{
-        render_asset::RenderAssetUsages,
-        texture::{CompressedImageFormats, ImageSampler, ImageType},
-    },
+use bevy::{asset::load_internal_asset, prelude::*};
+
+#[cfg(feature = "display")]
+use bevy::pbr::ExtendedMaterial;
+#[cfg(feature = "display")]
+use bevy::render::{
+    render_asset::RenderAssetUsages,
+    texture::{CompressedImageFormats, ImageSampler, ImageType},
 };
 
 use crate::{

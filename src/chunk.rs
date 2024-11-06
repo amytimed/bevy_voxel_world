@@ -6,7 +6,9 @@ use std::{
     sync::Arc,
 };
 
-use crate::{meshing, voxel::WorldVoxel, voxel_world_internal::ModifiedVoxels};
+#[cfg(feature = "display")]
+use crate::meshing;
+use crate::{voxel::WorldVoxel, voxel_world_internal::ModifiedVoxels};
 
 // The size of a chunk in voxels
 // TODO: implement a way to change this though the configuration

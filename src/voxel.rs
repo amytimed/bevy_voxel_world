@@ -1,4 +1,6 @@
-use bevy::{prelude::*, render::primitives::Aabb};
+use bevy::prelude::*;
+#[cfg(feature = "display")]
+use bevy::render::primitives::Aabb;
 use block_mesh::{MergeVoxel, Voxel, VoxelVisibility};
 
 pub const VOXEL_SIZE: f32 = 1.;
